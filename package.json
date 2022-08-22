@@ -2,10 +2,11 @@
   "name": "kit-extension",
   "displayName": "Script Kit Extension",
   "description": "Script Kit Extension",
-  "version": "0.1.0",
+  "version": "0.0.3",
   "publisher": "johnlindquist",
   "private": true,
   "license": "MIT",
+  "icon": "images/icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/johnlindquist/kit-extension"

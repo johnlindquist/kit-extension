@@ -1,8 +1,8 @@
 {
   "name": "kit-extension",
-  "displayName": "Script Kit Extension",
-  "description": "Script Kit Extension",
-  "version": "0.1.0",
+  "displayName": "Script Kit",
+  "description": "Run current script in Kit.app",
+  "version": "0.1.2",
   "publisher": "johnlindquist",
   "private": true,
   "license": "MIT",

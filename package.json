@@ -2,7 +2,7 @@
   "name": "kit-extension",
   "displayName": "Script Kit Extension",
   "description": "Script Kit Extension",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "publisher": "johnlindquist",
   "private": true,
   "license": "MIT",

@@ -1,0 +1,52 @@
+{
+  "name": "kit-extension",
+  "displayName": "Script Kit Extension",
+  "description": "Script Kit Extension",
+  "version": "0.1.0",
+  "publisher": "johnlindquist",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnlindquist/kit-extension"
+  },
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:kit.run"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "kit.run",
+        "title": "Run in Kit.app"
+      }
+    ]
+  },
+  "keybindings": [
+    {
+      "command": "kit.run",
+      "key": "alt+ctrl+;",
+      "mac": "alt+cmd+;"
+    }
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint . --ext .ts,.tsx",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.32.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "eslint": "^8.13.0",
+    "typescript": "^4.7.2"
+  }
+}

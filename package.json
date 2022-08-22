@@ -2,7 +2,7 @@
   "name": "kit-extension",
   "displayName": "Script Kit Extension",
   "description": "Script Kit Extension",
-  "version": "0.1.0",
+  "version": "0.0.3",
   "publisher": "johnlindquist",
   "private": true,
   "license": "MIT",
@@ -27,15 +27,15 @@
         "command": "kit.run",
         "title": "Run in Kit.app"
       }
+    ],
+    "keybindings": [
+      {
+        "command": "kit.run",
+        "key": "alt+ctrl+;",
+        "mac": "alt+cmd+;"
+      }
     ]
   },
-  "keybindings": [
-    {
-      "command": "kit.run",
-      "key": "alt+ctrl+;",
-      "mac": "alt+cmd+;"
-    }
-  ],
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",

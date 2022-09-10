@@ -2,7 +2,8 @@
 
 ## Features
 
-Run the currently open file in Script Kit.
+- Run the currently open file in Script Kit.
+- Outputs the current state of VS Code to ~/.kit/db/vscode.json
 
 ## Shorcuts
 

@@ -2,7 +2,7 @@
   "name": "kit-extension",
   "displayName": "Script Kit",
   "description": "Run current script in Kit.app",
-  "version": "0.1.2",
+  "version": "0.2.2",
   "publisher": "johnlindquist",
   "private": true,
   "license": "MIT",

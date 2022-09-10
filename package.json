@@ -2,7 +2,7 @@
   "name": "kit-extension",
   "displayName": "Script Kit",
   "description": "Run current script in Kit.app",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "publisher": "johnlindquist",
   "private": true,
   "license": "MIT",
@@ -18,7 +18,8 @@
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "onCommand:kit.run",
+    "onStartupFinished"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -40,7 +41,9 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "lint": "eslint . --ext .ts,.tsx",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish"
   },
   "devDependencies": {
     "@types/node": "^16.11.7",

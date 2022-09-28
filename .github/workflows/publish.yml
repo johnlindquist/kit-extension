@@ -22,6 +22,8 @@ jobs:
 
       - name: Attempt publish to GitHub
         run: npx semantic-release -b main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish
         run: vsce publish -p ${{ secrets.VSCE_TOKEN }}  --allow-star-activation

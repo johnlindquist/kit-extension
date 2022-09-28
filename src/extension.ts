@@ -7,7 +7,7 @@ import { exec } from "child_process"
 import * as fs from "fs"
 import * as os from "os"
 import * as path from "path"
-import { commands, ExtensionContext, window, workspace } from "vscode"
+import { commands, ExtensionContext, window } from "vscode"
 
 interface VSCodePreservedInfo {
   activeTextEditorFilePath: string | null

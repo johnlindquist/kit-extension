@@ -49,7 +49,8 @@ export function activate(context: ExtensionContext) {
       savedInfo.openTextEditorWindows = window.visibleTextEditors.map(editor => editor.document.uri.fsPath)
       updateSavedInfo()
     }),
-    workspace.onDidChangeWorkspaceFolders(() => {
+    // Listen for text editor focus
+    window.onDidChangeWindowState(() => {
       updateSavedInfo()
     })
   )

@@ -27,25 +27,27 @@ const saveActiveInfoToFile = () => {
   fs.writeFileSync(filePath, JSON.stringify(savedInfo, null, 2))
 }
 
+const updateSavedInfo = () => {
+  if (window.activeTextEditor) {
+    const { document } = window.activeTextEditor
+    savedInfo.activeTextEditorFilePath = document.fileName
+    savedInfo.activeTextEditorDir = path.dirname(document.fileName)
+  } else {
+    savedInfo.activeTextEditorFilePath = null
+    savedInfo.activeTextEditorDir = null
+  }
+
+  saveActiveInfoToFile()
+}
+
 export function activate(context: ExtensionContext) {
   context.subscriptions.push(
     window.onDidChangeActiveTextEditor(() => {
-      if (window.activeTextEditor) {
-        const { document } = window.activeTextEditor
-        savedInfo.activeTextEditorFilePath = document.fileName
-        savedInfo.activeTextEditorDir = path.dirname(document.fileName)
-      } else {
-        savedInfo.activeTextEditorFilePath = null
-
-        savedInfo.activeTextEditorDir = null
-      }
-
-      saveActiveInfoToFile()
+      updateSavedInfo()
     }),
     window.onDidChangeVisibleTextEditors(() => {
       savedInfo.openTextEditorWindows = window.visibleTextEditors.map(editor => editor.document.uri.fsPath)
-
-      saveActiveInfoToFile()
+      updateSavedInfo()
     })
   )
 

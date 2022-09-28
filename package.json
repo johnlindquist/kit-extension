@@ -2,7 +2,7 @@
   "name": "kit-extension",
   "displayName": "Script Kit",
   "description": "Run current script in Kit.app",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "publisher": "johnlindquist",
   "private": true,
   "license": "MIT",
@@ -15,7 +15,10 @@
     "vscode": "^1.32.0"
   },
   "keywords": [
-    "ScriptKit"
+    "ScriptKit",
+    "Script",
+    "Kit",
+    "Script Kit"
   ],
   "categories": [
     "Other"

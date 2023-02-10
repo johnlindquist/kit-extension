@@ -23,3 +23,9 @@ Will write the filePath to `~/.kit/run.txt`. Kit.app watches `run.txt` for chang
 
 - [Matt Pocock](https://github.com/mattpocock)
 - [John Lindquist](https://github.com/johnlindquist)
+
+## Questions
+
+Please ask over on our Kit GitHub Discussions page:
+
+[https://github.com/johnlindquist/kit/discussions](https://github.com/johnlindquist/kit/discussions)

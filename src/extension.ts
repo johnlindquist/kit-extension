@@ -50,8 +50,10 @@ export function activate(context: ExtensionContext) {
       updateSavedInfo()
     }),
     // Listen for text editor focus
-    window.onDidChangeWindowState(() => {
-      updateSavedInfo()
+    window.onDidChangeWindowState(e => {
+      if (e.focused) {
+        updateSavedInfo()
+      }
     })
   )
 

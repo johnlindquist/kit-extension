@@ -59,6 +59,24 @@ export function activate(context: ExtensionContext) {
 
   context.subscriptions.push(
     commands.registerCommand("kit.run", async () => {
+      // TODO: Save the active file before doing anything else
+      // TODO: Save the active file before doing anything else
+      const activeEditor = window.activeTextEditor
+      if (activeEditor) {
+        const success = await activeEditor.document.save()
+        if (!success) {
+          window.showErrorMessage(`Failed to save the active file.`)
+          return
+        }
+      } else {
+        window.showErrorMessage(`Failed to run script. No file is open.`)
+        return
+      }
+
+      // TODO: Setup a channel between the extension and the app for more reliable communication
+      // TEMP: wait 200 ms for the file to save
+      await new Promise(resolve => setTimeout(resolve, 200))
+
       if (window.activeTextEditor) {
         // if windows
         if (process.platform === "win32") {

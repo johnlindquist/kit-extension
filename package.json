@@ -31,7 +31,7 @@
     "commands": [
       {
         "command": "kit.run",
-        "title": "Run in Kit.app"
+        "title": "Run in Script Kit App"
       }
     ],
     "keybindings": [
